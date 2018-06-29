@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <nav-bar></nav-bar>
+    <shop-card></shop-card>
   </div>
 </template>
 
