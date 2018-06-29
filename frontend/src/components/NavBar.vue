@@ -1,22 +1,16 @@
 <template>
-  <div>
-    <a href='#'> Nearby Shops </a>
-    <a href='#'> My preferred Shops </a>
-  </div>
+  <ul class="nav justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Nearby Shops</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">My preferred Shops</a>
+    </li>
+  </ul>
 </template>
 
 <style scoped>
-  div {
-    position: fixed;
-    top: 0;
-    right: 0;
+  ul {
     padding: 20px;
-  }
-  a {
-    padding: 10px;
-    text-decoration: none;
-  }
-  a:active {
-    text-decoration: underline;
   }
 </style>
