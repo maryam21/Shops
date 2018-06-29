@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <nav-bar></nav-bar>
-    <shop-card></shop-card>
+    <div class="row">
+      <div class="col-sm-3" v-for="n in 5">
+        <shop-card></shop-card>
+      </div>
+    </div>
   </div>
 </template>
 
