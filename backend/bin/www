@@ -8,11 +8,15 @@ var app = require('../app');
 var debug = require('debug')('backend:server');
 var http = require('http');
 
+/** Require and configure dotenv and specify absolute path to .env */
+
+require('dotenv').config({path: '/.env'});
+
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort('8081');
+var port = normalizePort(process.env.SERVER_PORT || '3000');
 app.set('port', port);
 
 /**
