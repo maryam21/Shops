@@ -1,3 +1,4 @@
+import Api from './Api';
 
 /** Check for Geolocation support */
 if (navigator.geolocation) {
@@ -6,7 +7,13 @@ if (navigator.geolocation) {
       position => {
 
         /** Send coordinates to backend server */
-        console.log(position.coords.latitude);
+        Api().post('nearby-shops', [position.coords.latitude, position.coords.longitude])
+        .then(response => {
+            console.log('data sent');
+        })
+        .catch(error => {
+            console.log(error);
+        });
 
     }, err => {
 
