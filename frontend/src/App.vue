@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import UserPosition from './services/UserPosition';
 export default {
   name: 'app',
   data () {
