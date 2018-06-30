@@ -1,0 +1,22 @@
+{
+  "name": "shops-app",
+  "version": "1.0.0",
+  "description": "App that lists shops nearby",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maryam21/Shops.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maryam21/Shops/issues"
+  },
+  "homepage": "https://github.com/maryam21/Shops#readme",
+  "dependencies": {
+    "dotenv": "^6.0.0"
+  }
+}
