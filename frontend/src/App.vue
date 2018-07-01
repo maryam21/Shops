@@ -2,7 +2,7 @@
   <div id="app">
     <nav-bar></nav-bar>
     <div class="row">
-      <div class="col-sm-3" v-for="n in 5">
+      <div class="col-sm-3" v-for="shop in shops">
         <shop-card></shop-card>
       </div>
     </div>
@@ -15,7 +15,16 @@ export default {
   name: 'app',
   data () {
     return {
-
+      shops: []
+    }
+  },
+  mounted () {
+    this.getShops()
+  },
+  methods: {
+    async getShops () {
+      const response = await UserPosition
+      this.shops = response
     }
   }
 }
