@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import UserPosition from './services/UserPosition';
+import ShopsService from './services/ShopsService';
 export default {
   name: 'app',
   data () {
@@ -18,13 +18,13 @@ export default {
       shops: []
     }
   },
-  mounted () {
+  created () {
     this.getShops()
   },
   methods: {
     async getShops () {
-      const response = await UserPosition
-      this.shops = response
+      const response = await ShopsService.fetchShops()
+      this.shops = response.data.results;
     }
   }
 }
