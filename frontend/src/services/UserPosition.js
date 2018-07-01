@@ -1,7 +1,6 @@
 import Api from './Api';
+let receivedData;
 
-export default {
-fetchShops () {
 /** Check for Geolocation support */
 if (navigator.geolocation) {
 
@@ -12,6 +11,8 @@ if (navigator.geolocation) {
         Api().get(`nearby-shops?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}`)
         .then(response => {
             console.log(response);
+            receivedData = response.data.results;
+            console.log(receivedData);
         })
         .catch(error => {
             console.log(error);
@@ -33,4 +34,5 @@ if (navigator.geolocation) {
     console.log('Geolocation is not supported for this Browser/OS.');
 
 }
-}}
+
+export { receivedData as default};
