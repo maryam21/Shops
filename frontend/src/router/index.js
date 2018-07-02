@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-const Login = { template: '<h1>Login</h1>' };
 import App from '../components/App.vue';
+import Login from '../components/Login.vue';
 import NavBar from '../components/NavBar.vue';
 import ShopCard from '../components/ShopCard.vue';
 
