@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import ShopsService from './services/ShopsService';
+import ShopsService from '../services/ShopsService';
 export default {
   name: 'app',
   data () {
