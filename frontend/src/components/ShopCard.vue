@@ -1,11 +1,24 @@
 <template>
     <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="" alt="Card image cap">
+        <img v-if="photos" class="card-img-top" :src="url" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title">{{ title }}</h5>
             <a href="#" class="btn btn-danger">Dislike</a>
             <a href="#" class="btn btn-success">Like</a>
         </div>
     </div>  
 </template>
+
+<script>
+    export default {
+        data () {
+            return {
+                url: "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+this.photos[0].photo_reference+"&sensor=false&key="+process.env.API_KEY
+            };
+        },
+        props: {
+            title: String,
+            photos: Array
+        }
+    }
+</script>
