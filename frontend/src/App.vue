@@ -3,7 +3,7 @@
     <nav-bar></nav-bar>
     <div class="row">
       <div class="col-sm-3" v-for="shop in shops">
-        <shop-card></shop-card>
+        <shop-card :title="shop.name" :photo="shop.photos[0]"></shop-card>
       </div>
     </div>
   </div>
