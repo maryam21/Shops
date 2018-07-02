@@ -19,14 +19,14 @@ export default {
     }
   },
   created () {
-    this.getShops()
+    navigator.geolocation.getCurrentPosition(
+      async position => {
+        const response = await ShopsService.fetchShops(position.coords.latitude, position.coords.longitude)
+        this.shops = response.data.results;
+      },
+      error => console.warn(`ERROR(${error.code}): ${error.message}`)
+    );
   },
-  methods: {
-    async getShops () {
-      const response = await ShopsService.fetchShops()
-      this.shops = response.data.results;
-    }
-  }
 }
 </script>
 

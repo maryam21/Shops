@@ -1,11 +1,10 @@
 import Api from './Api'
-import UserPosition from './UserPosition'
 
 export default {
-  fetchShops () {
+  fetchShops (latitude, longitude) {
       
     /** GET request to backend server api */
     
-    return Api().get(`nearby-shops?latitude=${UserPosition.coords.latitude}&longitude=${UserPosition.coords.longitude}`)
+    return Api().get(`nearby-shops?latitude=${latitude}&longitude=${longitude}`)
   }
 }
