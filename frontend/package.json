@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "babel-runtime": "^6.26.0",
+    "dotenv-webpack": "^1.5.7",
     "vue": "^2.5.11"
   },
   "browserslist": [
