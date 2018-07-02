@@ -1,6 +1,6 @@
 <template>
     <div class="card" style="width: 18rem;">
-        <img v-if="photos" class="card-img-top" :src="url" alt="Card image cap">
+        <img class="card-img-top" :src="url" alt="No Image">
         <div class="card-body">
             <h5 class="card-title">{{ title }}</h5>
             <a href="#" class="btn btn-danger">Dislike</a>
@@ -11,14 +11,16 @@
 
 <script>
     export default {
-        data () {
-            return {
-                url: "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+this.photos[0].photo_reference+"&sensor=false&key="+process.env.API_KEY
-            };
-        },
         props: {
             title: String,
             photos: Array
+        },
+        computed: {
+         url() {
+           if (this.photos)
+              return "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+this.photos[0].photo_reference+"&sensor=false&key="+process.env.API_KEY ;
+           return "";
+         }
         }
     }
 </script>
