@@ -22,3 +22,9 @@
         }
     }
 </script>
+
+<style scoped>
+    img {
+        height: 150px;
+    }
+</style>
