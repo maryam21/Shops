@@ -19,10 +19,12 @@ To start using the app first configure the .env file in the root directory of th
 
 Start the backend server with:
    
+    cd backend/
     npm start
     
 And the frontend server in development mode:
 
+    cd frontend/
     npm run dev
   
 Or production mode:
