@@ -2,7 +2,8 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import App from '../components/App.vue';
-import Login from '../components/Login.vue';
+import SignUp from '../components/SignUp.vue';
+
 import NavBar from '../components/NavBar.vue';
 import ShopCard from '../components/ShopCard.vue';
 
@@ -13,7 +14,7 @@ Vue.use(VueRouter);
 
 const routes = [
   { path: '/', component: App },
-  { path: '/login', component: Login }
+  { path: '/signup', component: SignUp }
 ];
 
 const router = new VueRouter({
