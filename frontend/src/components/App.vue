@@ -20,13 +20,22 @@ export default {
   },
   created () {
     navigator.geolocation.getCurrentPosition(
-      async position => {
-        const response = await ShopsService.fetchShops(position.coords.latitude, position.coords.longitude)
-        this.shops = response.data.results;
+      position => {
+
+        /** Pass user current position to getShops method to fetch nearby shops */
+        this.getShops(position.coords.latitude, position.coords.longitude);
       },
       error => console.warn(`ERROR(${error.code}): ${error.message}`)
     );
   },
+  methods: {
+    async getShops(latitude, longitude){
+
+      /** Call the fetchShops method that will do the api call and return the result */
+      const response = await ShopsService.fetchShops(latitude, longitude)
+      this.shops = response.data.results;
+    }
+  }
 }
 </script>
 
