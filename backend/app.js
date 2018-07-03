@@ -3,10 +3,15 @@ var express = require('express');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
+const mongoose = require('mongoose');
 
 /** Require and configure dotenv and specify relative path to .env */
 
 require('dotenv').config({path: '../.env'});
+
+/** Connect to database using mongoose */
+
+mongoose.connect(process.env.DATABASE);
 
 var indexRouter = require('./routes/index');
 var shopsRouter = require('./routes/nearby-shops');
