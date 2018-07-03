@@ -13,7 +13,6 @@ require('dotenv').config({path: '../.env'});
 
 mongoose.connect(process.env.DATABASE);
 
-var indexRouter = require('./routes/index');
 var shopsRouter = require('./routes/nearby-shops');
 
 var app = express();
@@ -26,7 +25,6 @@ app.use(cors({
   origin: process.env.CLIENT_HOST
 }));
 
-app.use('/', indexRouter);
 app.use('/nearby-shops', shopsRouter);
 
 // catch 404 and forward to error handler
