@@ -1,7 +1,7 @@
 <template>
   <div>
       <nav-bar></nav-bar>
-      <user-form :submit="submit"></user-form>
+      <user-form action="/user/signup" submit="Sign Up"></user-form>
   </div>
 </template>
 
@@ -9,12 +9,7 @@
 import Vue from 'vue';
 import UserForm from '../components/UserForm.vue';
 Vue.component('user-form', UserForm);
+ export default {
 
-export default {
-  data () {
-    return {
-      submit: 'Sign Up'
-    };
-  },
-};
+    }
 </script>
