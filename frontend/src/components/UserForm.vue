@@ -25,7 +25,6 @@
 
 <style scoped>
     .container {
-        width: 45%;
-        padding: 100px;
+        width: 40%;
     }
 </style>
