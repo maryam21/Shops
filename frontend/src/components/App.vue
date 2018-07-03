@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import ShopsService from '../services/ShopsService';
+import Shops from '../services/shop/Shops';
 export default {
   name: 'app',
   data () {
@@ -32,7 +32,7 @@ export default {
     async getShops(latitude, longitude){
 
       /** Call the fetchShops method that will do the api call and return the result */
-      const response = await ShopsService.fetchShops(latitude, longitude)
+      const response = await Shops.fetchShops(latitude, longitude)
       this.shops = response.data.results;
     }
   }
