@@ -15,3 +15,16 @@ To start using the app first configure the .env file in the root directory of th
     SERVER_HOST=<your backend server address>
     SERVER_PORT=<the port in which the backend server is listening>
     API_KEY=<API key from google developers console>
+    DATABASE=<your database url> // e.g 'mongodb://localhost/my_database'
+
+Start the backend server with:
+   
+    npm start
+    
+And the frontend server in development mode:
+
+    npm run dev
+  
+Or production mode:
+
+    npm run build
