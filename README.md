@@ -1,7 +1,7 @@
 # Shops
 App that lists shops nearby
 
-To build this app I used Nodejs in the backend and Vuejs for the frontend. The features currently implemented:
+This app is built using MEVN(Mongodb, Express, Vue, Node) stack. The features currently implemented:
 
 - [ ] As a User, I can sign up using my email & password (in progress)
 - [ ] As a User, I can sign in using my email & password
