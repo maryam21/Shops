@@ -1,8 +1,8 @@
-var createError = require('http-errors');
-var express = require('express');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var cors = require('cors');
+const createError = require('http-errors');
+const express = require('express');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const cors = require('cors');
 const mongoose = require('mongoose');
 
 /** Require and configure dotenv and specify relative path to .env */
@@ -13,9 +13,9 @@ require('dotenv').config({path: '../.env'});
 
 mongoose.connect(process.env.DATABASE);
 
-var shopsRouter = require('./routes/api/shops');
+const shopsRouter = require('./routes/api/shops');
 
-var app = express();
+const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
