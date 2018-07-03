@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-      <form :action="action">
+      <form :action="action" method="post">
         <div class="form-group lign-items-center">
             <label for="exampleInputEmail1">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -18,7 +18,7 @@
     export default {
         props: {
             submit: String,
-            action: Function
+            action: String
         },
     };
 </script>
