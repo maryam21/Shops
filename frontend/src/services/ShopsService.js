@@ -5,6 +5,6 @@ export default {
       
     /** GET request to backend server api */
     
-    return Api().get(`nearby-shops?latitude=${latitude}&longitude=${longitude}`)
+    return Api().get(`api/shops?latitude=${latitude}&longitude=${longitude}`)
   }
 }
