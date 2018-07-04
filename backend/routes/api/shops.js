@@ -4,14 +4,17 @@ const axios = require('axios');
 
 /** GET nearby shops from google place search with user current position. */
 
-router.get('/', function(req, res, next) {
+router.get('/', function(req, res) {
 
-    axios.get(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${req.query.latitude},${req.query.longitude}&rankby=distance&type=shop&keyword=shop&key=${process.env.API_KEY}`)
-    .then(response => {
+    axios.get(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${req.query.latitude},${req.query.longitude}&rankby=distance&type=shop&keyword=shop&key=${process.env.API_KEY}`).
+    
+    then((response) => {
 
         res.send(response.data)
-    })
-    .catch(error => {
+
+    }).
+    catch((error) => {
+
         console.log(error);
     });
 });
