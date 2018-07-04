@@ -14,19 +14,26 @@ Vue.use(VueRouter);
 /** Define routes*/
 
 const routes = [
-  { path: '/', component: App },
-  { path: '/signup', component: SignUp }
+  {
+    component: App,
+    path: '/'
+  },
+  {
+    component: SignUp,
+    path: '/signup'
+  }
 ];
 
 /** Create the router instance with the `routes` option */
 
 const router = new VueRouter({
-    mode: 'history',  // history mode removes hashs from paths
+    // History mode removes hashs from paths
+    mode: 'history',
     routes
 });
 
 /** Create the root instance and then mount it */
 
-const app = new Vue({
+new Vue({
   router: router
 }).$mount('#app');
