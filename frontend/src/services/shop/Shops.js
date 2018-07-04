@@ -5,7 +5,7 @@ export default {
   
     /** GET request to backend server api */
 
-    return api().get(`api/shops?latitude=${latitude}&longitude=${longitude}`);
+    return api().get(`api/models/shop/shops?latitude=${latitude}&longitude=${longitude}`);
 
   }
 };
