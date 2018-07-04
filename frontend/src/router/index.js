@@ -4,23 +4,28 @@ import VueRouter from 'vue-router';
 import App from '../components/App.vue';
 import SignUp from '../components/SignUp.vue';
 
-import NavBar from '../components/NavBar.vue';
-import ShopCard from '../components/ShopCard.vue';
+/** To make navbar available to all components  */
 
+import NavBar from '../components/NavBar.vue';
 Vue.component('nav-bar', NavBar);
-Vue.component('shop-card', ShopCard);
 
 Vue.use(VueRouter);
+
+/** Define routes*/
 
 const routes = [
   { path: '/', component: App },
   { path: '/signup', component: SignUp }
 ];
 
+/** Create the router instance with the `routes` option */
+
 const router = new VueRouter({
-    mode: 'history',
+    mode: 'history',  // history mode removes hashs from paths
     routes
 });
+
+/** Create the root instance and then mount it */
 
 const app = new Vue({
   router: router
