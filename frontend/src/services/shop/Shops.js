@@ -1,10 +1,11 @@
-import Api from '../Api'
+import api from '../Api';
 
 export default {
   fetchShops (latitude, longitude) {
-      
+  
     /** GET request to backend server api */
-    
-    return Api().get(`api/shops?latitude=${latitude}&longitude=${longitude}`)
+
+    return api().get(`api/shops?latitude=${latitude}&longitude=${longitude}`);
+
   }
-}
+};
