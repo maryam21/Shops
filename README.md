@@ -17,6 +17,7 @@ To start using the app first configure the .env file in the root directory of th
     SERVER_API=<backend server api> // e.g 'localhost:3000/api'
     API_KEY=<API key from google developers console>
     DATABASE=<your database url> // e.g 'mongodb://localhost/my_database'
+    SESSION_SECRET=<a phrase to be used for the session>
 
 Start the backend server with:
    
