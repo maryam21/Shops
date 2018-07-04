@@ -3,7 +3,7 @@ import axios from 'axios';
 export default () => {
 
     return axios.create({
-            baseURL: process.env.SERVER_HOST
+            baseURL: process.env.SERVER_API
     });
 
 };

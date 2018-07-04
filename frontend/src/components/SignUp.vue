@@ -13,7 +13,7 @@ Vue.component('user-form', UserForm);
  export default {
     data() {
         return {
-            action: `${process.env.SERVER_HOST}/api/models/user/signup`
+            action: `${process.env.SERVER_API}/models/user/signup`
         };
     }
  };
