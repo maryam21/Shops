@@ -1,16 +1,16 @@
 <template>
   <div id="app">
     <nav-bar></nav-bar>
-    <div class="row">
-      <div class="col-sm-3" v-for="shop in shops">
-        <shop-card :title="shop.name" :photos="shop.photos"></shop-card>
-      </div>
-    </div>
+    <card-grid :shops="shops"></card-grid>
   </div>
 </template>
 
 <script>
+import Vue from 'vue';
 import Shops from '../services/shop/Shops';
+import CardGrid from '../components/CardGrid.vue';
+Vue.component('card-grid', CardGrid);
+
 export default {
   name: 'app',
   data () {
