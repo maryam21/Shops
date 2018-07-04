@@ -19,13 +19,13 @@ const UserSchema = new Schema({
 /** Generating a password hash */
 
 UserSchema.methods.generateHash = function(password) {
-    return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+    return bcrypt.hash(password, bcrypt.genSalt(8), null);
 };
 
 /** Check if password is valid */
 
 UserSchema.methods.verifyPassword = function(password) {
-    return bcrypt.compareSync(password, this.password);
+    return bcrypt.compare(password, this.password);
 };
 
 /** Create the model for users and expose it to our app */
