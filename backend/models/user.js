@@ -6,14 +6,14 @@ const bcrypt = require('bcrypt');
 
 const UserSchema = new Schema({
  email: {
+    required: true,
     type: String,
-    unique: true,
-    required: true
+    unique: true
   },
   password: {
-    type: String,
     required: true,
-  },
+    type: String
+  }
 });
 
 /** Generating a password hash */
@@ -31,4 +31,5 @@ UserSchema.methods.verifyPassword = function(password) {
 /** Create the model for users and expose it to our app */
 
 const User = mongoose.model('User', UserSchema);
+
 module.exports = User;
