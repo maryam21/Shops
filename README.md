@@ -14,6 +14,7 @@ To start using the app first configure the .env file in the root directory of th
     CLIENT_HOST=<your frontend server address>
     SERVER_HOST=<your backend server address>
     SERVER_PORT=<the port in which the backend server is listening>
+    SERVER_API=<backend server api> // e.g 'localhost:3000/api'
     API_KEY=<API key from google developers console>
     DATABASE=<your database url> // e.g 'mongodb://localhost/my_database'
 
