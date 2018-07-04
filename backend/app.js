@@ -4,10 +4,18 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const passport = require('passport');
+const flash = require('connect-flash');
+const session = require('express-session');
+
 
 /** Require and configure dotenv and specify relative path to .env */
 
 require('dotenv').config({ path: '../.env' });
+
+/** Load passport configuration */
+
+require('./config/passport')(passport);
 
 /** Connect to database using mongoose */
 
@@ -21,10 +29,13 @@ const app = express();
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors({ origin: process.env.CLIENT_HOST }));
 app.use(cookieParser());
-app.use(cors({
-  origin: process.env.CLIENT_HOST
-}));
+app.use(require('body-parser').urlencoded({ extended: true })); 
+app.use(session({ secret: process.env.SESSION_SECRET , resave: true, saveUninitialized: true })); // Session options
+app.use(passport.initialize());
+app.use(passport.session()); // For persistent login sessions
+app.use(flash());
 
 app.use('/api/models/shop/shops', shopsRouter);
 app.use('/api/models/user/signup', signupRouter);
