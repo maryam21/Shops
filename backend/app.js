@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 
 /** Require and configure dotenv and specify relative path to .env */
 
-require('dotenv').config({path: '../.env'});
+require('dotenv').config({ path: '../.env' });
 
 /** Connect to database using mongoose */
 
