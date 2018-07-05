@@ -1,5 +1,5 @@
 # Shops
-An application that lists shops nearby.
+A web app that lists shops nearby.
 
 This app is built using MEVN(Mongodb, Express, Vue, Node) stack. 
 
