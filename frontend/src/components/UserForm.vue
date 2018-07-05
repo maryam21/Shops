@@ -1,6 +1,7 @@
 <template>
     <div class="container">
       <form :action="action" method="post">
+        <div v-if="message" class="alert alert-danger">{{ message }}</div>
         <div class="form-group lign-items-center">
             <label for="exampleInputEmail1">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
@@ -18,7 +19,8 @@
     export default {
         props: {
             submit: String,
-            action: String
+            action: String,
+            message: String
         },
     };
 </script>

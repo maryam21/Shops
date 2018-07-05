@@ -44,7 +44,7 @@ passport.use('local-signup', new LocalStrategy({
 
             // Check to see if there's a user with that email
             if (user)
-                return done(null, false, req.flash('Message', 'Email is already in use.'));
+                return done(null, false, req.flash('message', 'Email is already in use.'));
 
                 // Create the user if there's no user with that email
             let newUser = new User();
