@@ -8,10 +8,10 @@ Features
 The features currently implemented:
 
 - [x] As a User, I can sign up using my email & password
-- [ ] As a User, I can sign in using my email & password (in progress)
+- [x] As a User, I can sign in using my email & password
 - [x] As a User, I can display the list of shops sorted by distance
 - [ ] As a User, I can like a shop, so it can be added to my preferred shops. 
-        Acceptance criteria: liked shops shouldn’t be displayed on the main page
+        Acceptance criteria: liked shops shouldn’t be displayed on the main page. (in progress)
 
 Structure
 ==========
