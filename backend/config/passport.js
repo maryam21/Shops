@@ -46,7 +46,7 @@ module.exports = function(passport) {
             if (user)
                 return done(null, false, req.flash('message', 'Email is already in use.'));
 
-                // Create the user if there's no user with that email
+            // Create the user if there's no user with that email
             let newUser = new User();
 
             // Set the user's local credentials
