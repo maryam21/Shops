@@ -1,7 +1,11 @@
 # Shops
 App that lists shops nearby
 
-This app is built using MEVN(Mongodb, Express, Vue, Node) stack. The features currently implemented:
+This app is built using MEVN(Mongodb, Express, Vue, Node) stack. 
+
+Features
+=========
+The features currently implemented:
 
 - [x] As a User, I can sign up using my email & password
 - [ ] As a User, I can sign in using my email & password (in progress)
@@ -9,6 +13,32 @@ This app is built using MEVN(Mongodb, Express, Vue, Node) stack. The features cu
 - [ ] As a User, I can like a shop, so it can be added to my preferred shops. 
         Acceptance criteria: liked shops shouldn’t be displayed on the main page
 
+Installation
+=============
+Locally I am using the following versions:
+    
+    node -v
+    v8.4.0
+    
+    npm -v
+    5.3.0
+    
+    mongod --version
+    db version v4.0.0
+    
+Install the dependencies:
+
+    cd Shops/
+    npm install
+    
+    cd frontend/
+    npm install
+    
+    cd backend/
+    npm install
+   
+Usage
+======
 To start using the app first configure the .env file in the root directory of the project:
 
     CLIENT_HOST=<your frontend server address>
