@@ -15,7 +15,7 @@ The features currently implemented:
 
 Structure
 ==========
-This repository contains two important folders:
+This repository contains two main folders:
 
 - frontend (VueJS)
 - backend (NodeJS Express)
