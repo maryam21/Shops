@@ -10,7 +10,7 @@
             <label for="exampleInputPassword1">Password</label>
             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
         </div>
-            <button type="submit" class="btn btn-primary">{{ submit }}</button>
+        <button type="submit" class="btn btn-primary">{{ submit }}</button>
       </form> 
     </div>
 </template>
