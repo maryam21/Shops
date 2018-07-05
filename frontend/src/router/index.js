@@ -4,6 +4,7 @@ import VueRouter from 'vue-router';
 import App from '../components/App.vue';
 import SignUp from '../components/SignUp.vue';
 import Login from '../components/Login.vue';
+import Favorites from '../components/Favorites.vue';
 
 /** To make navbar available to all components  */
 
@@ -26,6 +27,10 @@ const routes = [
   {
     component: Login,
     path: '/login'
+  },
+  {
+    component: Favorites,
+    path: '/favorites'
   }
 ];
 
