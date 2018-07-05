@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 
 import App from '../components/App.vue';
 import SignUp from '../components/SignUp.vue';
+import Login from '../components/Login.vue';
 
 /** To make navbar available to all components  */
 
@@ -21,6 +22,10 @@ const routes = [
   {
     component: SignUp,
     path: '/signup'
+  },
+  {
+    component: Login,
+    path: '/login'
   }
 ];
 
