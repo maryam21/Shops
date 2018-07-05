@@ -2,6 +2,7 @@
   <div>
       <nav-bar></nav-bar>
       <user-form :action="action" submit="Login"></user-form>
+      <p>Need an account? <a href="/signup">Signup</a></p>
   </div>
 </template>
 
@@ -18,3 +19,9 @@ Vue.component('user-form', UserForm);
     }
  };
 </script>
+
+<style scoped>
+    p {
+        padding: 300px;
+    }
+</style>
