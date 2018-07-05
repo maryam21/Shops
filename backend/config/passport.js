@@ -22,9 +22,9 @@ module.exports = function(passport) {
         });
 });
 
-/** Local signup strategy */
+   /** Local signup strategy */
 
-passport.use('local-signup', new LocalStrategy({
+   passport.use('local-signup', new LocalStrategy({
 
         // We will use email instead of username
         usernameField : 'email',
@@ -61,5 +61,34 @@ passport.use('local-signup', new LocalStrategy({
             return done(null, newUser);
             });
         });    
-   }));
+    }));
+    
+    /** Local login strategy */
+
+    passport.use('local-login', new LocalStrategy({
+        usernameField : 'email',
+        passwordField : 'password',
+        passReqToCallback : true
+    },
+    function(req, email, password, done) {
+
+        // Checking to see if the user trying to login already exists
+        User.findOne({ 'email' :  email }, function(err, user) {
+
+            if (err)
+                return done(err);
+
+            // Return the error message if no user is found
+            if (!user)
+                return done(null, false, req.flash('message', 'No user found.'));
+
+            // When the user exists but the password is wrong
+            if (!user.verifyPassword(password))
+                return done(null, false, req.flash('message', 'Wrong password.'));
+
+            // Return successful user
+            return done(null, user);
+        });
+
+    }));
 };
