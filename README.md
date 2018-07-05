@@ -13,6 +13,13 @@ The features currently implemented:
 - [ ] As a User, I can like a shop, so it can be added to my preferred shops. 
         Acceptance criteria: liked shops shouldn’t be displayed on the main page
 
+Structure
+==========
+This repository contains two important folders:
+
+frontend (VueJS)
+backend (NodeJS Express)
+
 Installation
 =============
 Locally I am using the following versions:
