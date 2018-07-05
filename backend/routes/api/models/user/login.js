@@ -9,7 +9,7 @@ router.post('/', passport.authenticate('local-login', {
         // Redirect to the main page
         successRedirect : process.env.CLIENT_HOST,
 
-        // Redirect back to the signup page when there is an error
+        // Redirect back to the login page when there is an error
         failureRedirect : process.env.CLIENT_HOST+'/login',
 
         // Allow flash messages
