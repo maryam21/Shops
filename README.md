@@ -17,8 +17,8 @@ Structure
 ==========
 This repository contains two important folders:
 
-frontend (VueJS)
-backend (NodeJS Express)
+- frontend (VueJS)
+- backend (NodeJS Express)
 
 Installation
 =============
