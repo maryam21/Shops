@@ -1,6 +1,5 @@
 <template>
   <div>
-      <nav-bar></nav-bar>
       <user-form :action="action" submit="Login"></user-form>
       <p>Need an account? <a href="/signup">Signup</a></p>
   </div>

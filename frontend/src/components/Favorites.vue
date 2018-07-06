@@ -1,6 +1,5 @@
 <template>
   <div>
-    <nav-bar></nav-bar>
     <card-grid :shops="shops"></card-grid>
   </div>
 </template>
