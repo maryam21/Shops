@@ -1,10 +1,10 @@
 <template>
   <ul class="nav justify-content-end">
     <li class="nav-item">
-      <a class="nav-link active" href="/">Nearby Shops</a>
+      <router-link to="/" class="nav-link active">Nearby Shops</router-link>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/favorites">My preferred Shops</a>
+      <router-link to="/favorites" class="nav-link">My preferred Shops</router-link>
     </li>
   </ul>
 </template>
