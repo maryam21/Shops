@@ -17,8 +17,6 @@
 </template>
 
 <script>
-import SignUp from '../services/user/SignUp';
-
     export default {
         data () {
             return {
