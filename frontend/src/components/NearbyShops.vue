@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <card-grid :shops="shops"></card-grid>
   </div>
 </template>
