@@ -33,7 +33,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors({ origin: process.env.CLIENT_HOST }));
 app.use(cookieParser());
 app.use(require('body-parser').urlencoded({ extended: true })); 
-app.use(session({ secret: process.env.SESSION_SECRET , resave: true, saveUninitialized: true })); // Session options
+app.use(session({ secret: process.env.SESSION_SECRET , resave: false, saveUninitialized: false })); // Session options
 app.use(passport.initialize());
 app.use(passport.session()); // For persistent login sessions
 app.use(flash());
