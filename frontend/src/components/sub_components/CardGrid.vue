@@ -8,7 +8,7 @@
 
 <script>
 import Vue from 'vue';
-import ShopCard from '../components/ShopCard.vue';
+import ShopCard from './ShopCard.vue';
 Vue.component('shop-card', ShopCard);
 
 export default {

@@ -6,7 +6,7 @@
 
 <script>
 import Vue from 'vue';
-import CardGrid from '../components/CardGrid.vue';
+import CardGrid from './sub_components/CardGrid.vue';
 Vue.component('card-grid', CardGrid);
 
 export default {

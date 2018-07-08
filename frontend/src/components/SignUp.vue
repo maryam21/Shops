@@ -6,7 +6,7 @@
 
 <script>
 import Vue from 'vue';
-import UserForm from '../components/UserForm.vue';
+import UserForm from './sub_components/UserForm.vue';
 import SignUp from '../services/user/SignUp';
 Vue.component('user-form', UserForm);
 

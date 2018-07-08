@@ -7,7 +7,7 @@
 
 <script>
 import Vue from 'vue';
-import NavBar from '../components/NavBar.vue';
+import NavBar from './sub_components/NavBar.vue';
 Vue.component('nav-bar', NavBar);
 export default {
   name: 'app'
