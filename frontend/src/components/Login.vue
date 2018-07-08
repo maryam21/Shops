@@ -1,7 +1,7 @@
 <template>
   <div>
       <user-form :method="login" :message="message" :error="error" submit="Login"></user-form>
-      <p>Need an account? <a href="/signup">Signup</a></p>
+      <p>Need an account? <router-link to="/signup">Signup</router-link></p>
   </div>
 </template>
 
