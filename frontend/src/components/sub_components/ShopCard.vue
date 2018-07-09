@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import Favorites from '../../services/shop/Favorites';
+
     export default {
         props: {
             title: String,
@@ -24,8 +26,9 @@
          }
         },
         methods: {
-            addToFavorites() {
-                console.log(this.id)
+            async addToFavorites() {
+                /** Call the addShop method that will do the api call and return the result */
+                const response = await Favorites.addShop(this.id)
             }
         }
     }
