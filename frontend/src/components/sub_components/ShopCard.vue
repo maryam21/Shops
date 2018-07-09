@@ -4,7 +4,7 @@
         <div class="card-body">
             <h5 class="card-title">{{ title }}</h5>
             <a href="#" class="btn btn-danger">Dislike</a>
-            <button v-on:click="" class="btn btn-success">Like</button>
+            <button v-on:click="addToFavorites" class="btn btn-success">Like</button>
         </div>
     </div>  
 </template>
@@ -13,7 +13,7 @@
     export default {
         props: {
             title: String,
-            photos: Array,
+            photos: Array
         },
         computed: {
          url() {
@@ -21,6 +21,11 @@
               return "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+this.photos[0].photo_reference+"&sensor=false&key="+process.env.API_KEY ;
            return "";
          }
+        },
+        methods: {
+            addToFavorites() {
+                console.log('ok')
+            }
         }
     }
 </script>
