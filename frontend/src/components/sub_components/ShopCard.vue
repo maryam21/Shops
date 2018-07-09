@@ -4,7 +4,7 @@
         <div class="card-body">
             <h5 class="card-title">{{ title }}</h5>
             <a href="#" class="btn btn-danger">Dislike</a>
-            <a href="#" class="btn btn-success">Like</a>
+            <button v-on:click="" class="btn btn-success">Like</button>
         </div>
     </div>  
 </template>
@@ -13,7 +13,7 @@
     export default {
         props: {
             title: String,
-            photos: Array
+            photos: Array,
         },
         computed: {
          url() {
