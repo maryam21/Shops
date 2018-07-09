@@ -13,13 +13,14 @@
     export default {
         props: {
             title: String,
-            photos: Array
+            photos: Array,
+            icon: String
         },
         computed: {
          url() {
            if (this.photos)
               return "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+this.photos[0].photo_reference+"&sensor=false&key="+process.env.API_KEY ;
-           return "";
+           return this.icon;
          }
         }
     }

@@ -1,7 +1,7 @@
 <template>
     <div class="row">
       <div class="col-sm-3" v-for="shop in shops">
-        <shop-card :title="shop.name" :photos="shop.photos"></shop-card>
+        <shop-card :title="shop.name" :photos="shop.photos" :icon="shop.icon"></shop-card>
       </div>
     </div>
 </template>
