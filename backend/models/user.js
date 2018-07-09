@@ -13,7 +13,8 @@ const UserSchema = new Schema({
   password: {
     required: true,
     type: String
-  }
+  },
+  favoriteShops: [{ type: Schema.Types.ObjectId, ref: 'Shop' }]
 });
 
 /** Generating a password hash */
