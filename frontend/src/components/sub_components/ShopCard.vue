@@ -13,7 +13,8 @@
     export default {
         props: {
             title: String,
-            photos: Array
+            photos: Array,
+            id: String
         },
         computed: {
          url() {
@@ -24,7 +25,7 @@
         },
         methods: {
             addToFavorites() {
-                console.log('ok')
+                console.log(this.id)
             }
         }
     }
