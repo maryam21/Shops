@@ -3,6 +3,7 @@
         <img class="card-img-top" :src="url" alt="No Image">
         <div class="card-body">
             <h5 class="card-title">{{ title }}</h5>
+            <p v-if="photos" v-html="photos[0].html_attributions[0]"></p>
             <a href="#" class="btn btn-danger">Dislike</a>
             <a href="#" class="btn btn-success">Like</a>
         </div>
@@ -39,5 +40,8 @@ import Shops from '../../services/shop/Shops'
 <style scoped>
     img {
         height: 150px;
+    }
+    .card {
+        margin: 10px;
     }
 </style>
