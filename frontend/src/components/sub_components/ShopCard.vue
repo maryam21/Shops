@@ -10,18 +10,28 @@
 </template>
 
 <script>
+import Shops from '../../services/shop/Shops'
     export default {
+        data() {
+            return {
+                url: this.icon
+            }
+        },
         props: {
             title: String,
             photos: Array,
             icon: String
         },
-        computed: {
-         url() {
-           if (this.photos)
-              return "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+this.photos[0].photo_reference+"&sensor=false&key="+process.env.API_KEY ;
-           return this.icon;
-         }
+        created() {
+            if (this.photos){
+                this.getPhoto(this.photos[0].photo_reference) 
+            }
+        },
+        methods: {
+            async getPhoto(reference) {
+                const response = await Shops.fetchPhoto(reference)
+                this.url = response.data
+            }
         }
     }
 </script>
