@@ -68,3 +68,5 @@ And the frontend server in development mode:
 Or production mode:
 
     npm run build
+    npm install -g serve
+    serve -s dist
