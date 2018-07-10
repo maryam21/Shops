@@ -24,6 +24,7 @@ mongoose.connect(process.env.DATABASE);
 const shopsRouter = require('./routes/api/models/shop/shops');
 const signupRouter = require('./routes/api/models/user/signup');
 const loginRouter = require('./routes/api/models/user/login');
+const photoRouter = require('./routes/api/models/shop/photo');
 
 const app = express();
 
@@ -41,6 +42,7 @@ app.use(flash());
 app.use('/api/models/shop/shops', shopsRouter);
 app.use('/api/models/user/signup', signupRouter);
 app.use('/api/models/user/login', loginRouter);
+app.use('/api/models/shop/photo', photoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
