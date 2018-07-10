@@ -1,13 +1,11 @@
-const createError = require('http-errors');
-const express = require('express');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
-const cors = require('cors');
-const mongoose = require('mongoose');
-const passport = require('passport');
-const flash = require('connect-flash');
-const session = require('express-session');
-
+var createError = require('http-errors');
+var express = require('express');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+var cors = require('cors');
+var mongoose = require('mongoose');
+var passport = require('passport');
+var session = require('express-session');
 
 /** Require and configure dotenv and specify relative path to .env */
 
@@ -37,7 +35,6 @@ app.use(require('body-parser').urlencoded({ extended: true }));
 app.use(session({ secret: process.env.SESSION_SECRET , resave: false, saveUninitialized: false })); // Session options
 app.use(passport.initialize());
 app.use(passport.session()); // For persistent login sessions
-app.use(flash());
 
 app.use('/api/models/shop/shops', shopsRouter);
 app.use('/api/models/user/signup', signupRouter);
