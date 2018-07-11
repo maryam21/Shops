@@ -10,8 +10,7 @@ The features currently implemented:
 - [x] As a User, I can sign up using my email & password
 - [x] As a User, I can sign in using my email & password
 - [x] As a User, I can display the list of shops sorted by distance
-- [ ] As a User, I can like a shop, so it can be added to my preferred shops. 
-        Acceptance criteria: liked shops shouldn’t be displayed on the main page. (in progress)
+- [ ] As a User, I can like a shop, so it can be added to my preferred shops. Liked shops shouldn’t be displayed on the main page. (in progress)
 
 Structure
 ==========
@@ -54,7 +53,7 @@ To start using the app first configure the .env file in the root directory of th
     SERVER_API=<backend server api> // e.g 'localhost:3000/api'
     API_KEY=<API key from google developers console>
     DATABASE=<your database url> // e.g 'mongodb://localhost/my_database'
-    SESSION_SECRET=<a phrase to be used for the session>
+    SESSION_SECRET=<a string to be used for the session>
 
 Start the backend server with:
    
@@ -69,3 +68,5 @@ And the frontend server in development mode:
 Or production mode:
 
     npm run build
+    npm install -g serve
+    serve -s dist

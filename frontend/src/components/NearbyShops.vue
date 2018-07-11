@@ -1,5 +1,6 @@
 <template>
   <div>
+    <p v-if="error">{{ error }}</p>
     <card-grid :shops="shops"></card-grid>
   </div>
 </template>
@@ -14,7 +15,8 @@ export default {
   name: 'app',
   data () {
     return {
-      shops: []
+      shops: [],
+      error: null
     }
   },
   created () {
@@ -24,7 +26,7 @@ export default {
         /** Pass user current position to getShops method to fetch nearby shops */
         this.getShops(position.coords.latitude, position.coords.longitude);
       },
-      error => console.warn(`ERROR(${error.code}): ${error.message}`)
+      error => this.error = error.message
     );
   },
   methods: {
