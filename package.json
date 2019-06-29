@@ -18,5 +18,9 @@
   "homepage": "https://github.com/maryam21/Shops#readme",
   "dependencies": {
     "dotenv": "^6.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.0.1",
+    "eslint-plugin-node": "^6.0.1"
   }
 }
